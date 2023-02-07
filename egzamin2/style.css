@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+:root{
+    --prim-clr-1: #393D3F;
+    --accent-clr-1: #1d1e1f;
+    --prim-clr-2: #D5BBB1;
+    --prim-clr-3: #9CC4B2;
+    --prim-clr-4: #C98CA7;
+    --prim-clr-5: #E76D83;
+    --prim-clr-6: #ffffff;
+}
+
+body{
+    font-family: Open Sana, Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 4rem calc(100vh - 4rem * 2) 4rem;
+    color: var(--prim-clr-6);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button{
+    font-family: inherit;
+}
+
+header, footer{
+    background: var(--prim-clr-5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-cont{
+    background: var(--prim-clr-4);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+hr{
+    height: 3px;
+    background: var(--prim-clr-3);
+    border: none;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+
+.inp-id{
+    background: var(--prim-clr-2);
+    color: var(--prim-clr-1);
+    border: none;
+    outline: none;
+    padding: .5rem;
+    border-radius: 7px;
+    position: relative;
+}
+
+button{
+    margin-top: 1rem;
+}
+
+.list-cont{
+    overflow-y: auto;
+}
+
+button, input[type='submit']{
+    background: var(--prim-clr-3);
+    border: 1px solid var(--prim-clr-2);
+    color: var(--prim-clr-1);
+    padding: 5px;
+    border-radius: 5px;
+    transition: all ease-in-out .15s;
+}
+
+button:hover, input[type='submit']:hover{
+    scale: 1.05;
+    border: 2px solid var(--prim-clr-3);
+}
+
+p, h4{
+    line-height: 30px;
+}
+
+img{
+    height: 150px;
+    margin: 1rem 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--prim-clr-3);
+    border-radius: 5rem;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--prim-clr-1);
+    border-radius: 5rem;
+    transition: all ease-in-out .15s;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-clr-1);
+}

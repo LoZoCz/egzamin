@@ -1,0 +1,7 @@
+1. SELECT id, imie, nazwisko, rok_urodzenia, zdjecie FROM osoby LIMIT 30;
+
+2. SELECT osoby.imie, osoby.nazwisko, osoby.rok_urodzenia, osoby.opis, osoby.zdjecie, hobby.nazwa FROM osoby INNER JOIN hobby ON osoby.Hobby_id=hobby.id WHERE osoby.id=10;
+
+3. SELECT MIN(rok_urodzenia) AS Minimalny_wiek, MAX(rok_urodzenia) AS Maksymalny_wiek, AVG(rok_urodzenia) AS Sredni_wiek FROM osoby;
+
+4. UPDATE osoby SET `Hobby_id`=6 WHERE `Hobby_id`=4;

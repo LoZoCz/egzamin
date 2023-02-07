@@ -1,0 +1,67 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header, footer{
+    background: #00838F;
+    color: white;
+    padding: 5px;
+    font-size: 130%;
+    text-align: center;
+    clear: both;
+}
+
+.lewy{
+    background: #EFEFEF;
+    width: 55%;
+    float: left;
+}
+
+.jeden{
+    height: 150px;
+}
+
+.dwa{
+    height: 300px;
+}
+
+.prawy{
+    background: #4FB3BF;
+    width: 45%;
+    height: calc(450px + 18.7px * 2);
+    text-align: center;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img{
+    box-shadow: 10px 10px 7px dimgray;
+    margin: 20px;
+    width: 400px;
+}
+
+table, th, td{
+    border: 1px solid #4FB3BF;
+    border-collapse: collapse;
+}
+
+table{
+    margin: auto;
+    width: 80%;
+}
+
+th, td{
+    padding: 4px;
+}
+
+tbody{
+    transition: all ease-in-out .15s;
+}
+
+tbody:hover{
+    background: #4FB3BF;
+}

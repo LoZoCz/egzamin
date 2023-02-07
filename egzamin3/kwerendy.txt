@@ -1,0 +1,7 @@
+1. SELECT `id`, `nazwa`, `wystepowanie` FROM `ryby` WHERE style_zycia=1;
+ 
+2. SELECT `ryby_id`, `wymiar_ochronny` FROM `okres_ochronny` WHERE wymiar_ochronny<30;
+
+3. SELECT ryby.nazwa, lowisko.akwen, lowisko.wojewodztwo, ryby.wystepowanie FROM ryby INNER JOIN lowisko ON ryby.id=lowisko.Ryby_id WHERE ryby.wystepowanie LIKE '%rzeki%';
+
+4. ALTER TABLE ryby dobowy_limit int(255);

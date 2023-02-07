@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Panel administratora</title>
+</head>
+<body>
+    <header>
+        <h1>Portal społecznościowy - panel administratora</h1>
+    </header>
+    <div class="main-cont">
+        <div class="list-cont">
+            <!-- php skrypt do listy -->
+            <a href="index.txt"><button class="btn">Inne ustawienia</button></a>
+        </div>
+        <div class="search-cont">
+            <div class="searching-section">
+                <form method="post">
+                    <label class="inp-name" for="id">Podaj ID</label>
+                    <input type="number" name="prof_num" class="inp-id" id="id">
+                    <input type="submit" value="ZOBACZ" class="btn sub" name="show_prof">
+                </form>
+                <hr>
+                <!-- php skrypt do profilu -->
+            </div>
+            <div class="info-section">
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h4>Autor: Mateusz Czernik (PESEL)</h4>
+    </footer>
+</body>
+</html>
