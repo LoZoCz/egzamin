@@ -11,6 +11,7 @@
     <header>
         <h1>Portal dla wędkarzy</h1>
     </header>
+    <div class="cont">
     <div class="lewy">
         <div class="jeden">
             <h3>Ryby zamieszkujące rzeki</h3>
@@ -28,15 +29,14 @@
 
                     if(!$connect){
                         // echo('Nie połączono z bazą!');
-                        mysqli_close($connect);
                     } else{
                         // echo('Połączono z bazą!');
 
-                        $query = 'SELECT ryby.nazwa, lowisko.akwen, lowisko.wojewodztwo FROM ryby INNER JOIN lowisko ON ryby.id=lowisko.Ryby_id WHERE ryby.wystepowanie LIKE "%rzeki%";';
+                        $query = 'SELECT ryby.nazwa, lowisko.akwen, lowisko.wojewodztwo FROM ryby INNER JOIN lowisko ON ryby.id=lowisko.Ryby_id WHERE lowisko.rodzaj = 3;';
                         
-                        $result = $connect->query($query);
+                        $sql = mysqli_query($connect, $query);
 
-                        while($row = $result->fetch_assoc()){
+                        while($row = mysqli_fetch_assoc($sql)){
                             echo("<li>" . $row['nazwa'] . " pływa w rzece " . $row['akwen'] . ", " . $row['wojewodztwo'] . '</li>');
                         }
 
@@ -64,25 +64,22 @@
 
                     if(!$connect){
                         // echo('Nie połączono z bazą!');
-                        mysqli_close($connect);
                     } else{
                         // echo('Połączono z bazą!');
 
                         $query = 'SELECT `id`, `nazwa`, `wystepowanie` FROM `ryby` WHERE styl_zycia=1;';
 
                         $sql = mysqli_query($connect, $query);
-                        
-                        $result = $connect->query($query);
 
                         $rows = mysqli_num_rows($sql);
 
                         // echo($rows);
 
                         for($i = 0; $i<$rows; $i++){
-                            while($row = $result->fetch_assoc()){
+                            while($row = mysqli_fetch_assoc($sql)){
                                 $i++;
                     
-                                echo("<tbody><td>" . $i . "</td><td>" . $row['nazwa'] . "</td><td>" . $row['wystepowanie'] . '</td></tbody>');
+                                echo("<tbody><td>" . $i . '.' . "</td><td>" . $row['nazwa'] . "</td><td>" . $row['wystepowanie'] . '</td></tbody>');
                             }
                         }
 
@@ -96,6 +93,7 @@
     <div class="prawy">
         <img src="ryba1.jpg" alt="Sum">
         <a href="kwerendy.txt">Pobierz kwerendy</a>
+    </div>
     </div>
     <footer>
         <p>Stronę wykonał: Mateusz Czernik (PESEL)</p>
