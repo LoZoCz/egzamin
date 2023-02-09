@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap');
+
+:root{
+    --prim-clr-1: #395144;
+    --prim-clr-2: #4E6C50;
+    --prim-clr-3: #b7965d;
+    --prim-clr-4: #F0EBCE;
+
+    --font-fam: Roboto Slab;
+}
+
+body{
+    font-family: var(--font-fam);
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 10% 1fr 5%;
+}
+
+header, footer{
+    background: var(--prim-clr-1);
+    color: var(--prim-clr-4);
+    display: flex;
+}
+
+header{
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+footer{
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cont{
+    display: grid;
+    grid-template-columns: 45% 1fr 45%;
+    background: linear-gradient(90deg, rgba(183,150,93,1) 45%, rgba(240,235,206,1) 55%);
+}
+
+.left{
+    color: var(--prim-clr-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.right{
+    color: var(--prim-clr-1); 
+}
+
+.left, .right{
+    padding: 2rem;
+}
+
+table{
+    width: 450px;
+}
+
+td{
+    border: 3px solid var(--prim-clr-2);
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.second img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.second{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+}
+
+.third{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
