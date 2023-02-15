@@ -71,18 +71,9 @@
 
                         $sql = mysqli_query($connect, $query);
 
-                        $rows = mysqli_num_rows($sql);
-
-                        // echo($rows);
-
-                        for($i = 0; $i<$rows; $i++){
-                            while($row = mysqli_fetch_assoc($sql)){
-                                $i++;
-                    
-                                echo("<tbody><td>" . $i . '.' . "</td><td>" . $row['nazwa'] . "</td><td>" . $row['wystepowanie'] . '</td></tbody>');
-                            }
+                        while($row = mysqli_fetch_assoc($sql)){
+                            echo("<tbody><td>" . $row['id'] . '.' . "</td><td>" . $row['nazwa'] . "</td><td>" . $row['wystepowanie'] . '</td></tbody>');
                         }
-
 
                         mysqli_close($connect);
                     }
