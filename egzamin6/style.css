@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root{
+    --clr-1: #29434E;
+    --clr-2: #546E7A;
+    --clr-3: #B0BEC5;
+    --clr-4: #ffffff;
+}
+
+body{
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left__header{
+    color: var(--clr-4);
+    background: var(--clr-1);
+    width: 70%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left__header > h1{
+    margin: 0;
+}
+
+.right__header{
+    color: var(--clr-4);
+    background: var(--clr-1);
+    width: 30%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont{
+    background: var(--clr-3);
+}
+
+.recommend-box__cont, .fantasy-box__cont{
+    overflow-y: auto;
+    overflow-x: auto;
+    height: 320px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.film-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.film-box > img{
+    height: 150px;
+    width: 226px;
+}
+
+footer{
+    color: var(--clr-4);
+    background: var(--clr-2);
+}
+
+nav{
+    color: var(--clr-4);
+    background: var(--clr-2);
+}
+
+nav > h3{
+    margin: 0;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+input[type="number"]{
+    height: 20px;
+}
+
+footer > p{
+    margin: 0;
+}
+
+h4{
+    text-align: center;
+    margin: 0;
+}
