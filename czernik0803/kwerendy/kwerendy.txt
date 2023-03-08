@@ -1,0 +1,7 @@
+1. SELECT imie, nazwisko, punkty FROM klienci GROUP BY punkty DESC LIMIT 3;
+
+2. SELECT typy.nazwa, COUNT(klienci.Typy_id) as Liczba_typow FROM typy INNER JOIN klienci ON typy.id = klienci.Typy_id GROUP BY typy.nazwa;
+
+3. SELECT klienci.zdjecie, klienci.imie, opinie.opinia FROM klienci INNER JOIN opinie ON klienci.id = opinie.Klienci_id WHERE klienci.Typy_id = 2 OR klienci.Typy_id = 3;
+
+4. ALTER TABLE klienci ADD COLUMN adres varchar(50);

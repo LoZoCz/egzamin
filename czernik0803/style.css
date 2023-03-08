@@ -1,0 +1,65 @@
+body{
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+header{
+    background: tomato;
+    color: white;
+    padding: 10px;
+}
+
+.cont{
+    background: seashell;
+    height: 500px;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.opinion{
+    background: white;
+    color: dimgray;
+    width: 60%;
+    height: 220px;
+    box-shadow: 0px 0px 10px 5px dimgray;
+}
+
+img{
+    float: left;
+    margin: 10px;
+    border-radius: 10px;
+    width: 150px;
+}
+
+.cyt{
+    padding: 10px;
+    font-size: 150%;
+    font-style: italic;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+h4{
+    text-align: right;
+    margin-right: 40px;
+    font-size: 150%;
+    font-style: italic;
+}
+
+a{
+    color: white;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    background: tomato;
+    color: white;
+}
+
